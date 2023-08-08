@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=1]
 [ext_resource path="res://Models/Furniture/deskCorner.mesh" type="ArrayMesh" id=2]
 [ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=3]
-[ext_resource path="res://default_env.tres" type="Environment" id=4]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 
@@ -137,23 +136,9 @@ _sections_unfolded = [ "Light", "Shadow" ]
 
 [node name="Player" parent="." index="3" instance=ExtResource( 3 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25.4855 )
+editor/display_folded = true
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 0, 25.4855 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Camera" type="Camera" parent="Player" index="3"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 8.51453 )
-keep_aspect = 1
-cull_mask = 1048575
-environment = ExtResource( 4 )
-h_offset = 0.0
-v_offset = 0.0
-doppler_tracking = 0
-projection = 0
-current = false
-fov = 70.0
-size = 1.0
-near = 0.05
-far = 100.0
-
-
+[editable path="Player"]
