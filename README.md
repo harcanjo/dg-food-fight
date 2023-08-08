@@ -4,6 +4,9 @@ Project from Discovering Godot
 
 ## Progress
 
+- [x] Simple Level
+![Simple Level](_screenshots/simple-level.png)
+
 - [x] Mouselook
 ![Mouselook](_screenshots/mouselook.gif)
 
