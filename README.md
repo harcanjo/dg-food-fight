@@ -4,6 +4,9 @@ Project from Discovering Godot
 
 ## Progress
 
+- [x] Mouselook
+![Mouselook](_screenshots/mouselook.gif)
+
 - [x] Player
 ![Player](_screenshots/player.png)
 
