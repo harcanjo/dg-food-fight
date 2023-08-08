@@ -16,5 +16,36 @@ visible = false
 
 transform = Transform( 0.25, 0, 0, 0, -1.09278e-008, -0.25, 0, 0.25, -1.09278e-008, 0, 0, 0 )
 
+[node name="AnimationTreePlayer" parent="Armature" index="2"]
+
+data = {
+"active": true,
+"connections": [ "IdleAnim", "Move", 0, "RunAnim", "Move", 1, "Move", "out", 0 ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 577, 31 ),
+"type": "blend2"
+}, {
+"id": "out",
+"position": Vector2( 830, 69 ),
+"type": "output"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 170, 10 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Run",
+"id": "RunAnim",
+"position": Vector2( 170, 117 ),
+"type": "animation"
+} ]
+}
+
 
 [editable path="Armature"]
