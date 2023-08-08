@@ -4,5 +4,5 @@ Project from Discovering Godot
 
 ## Progress
 
-- [] ...
-![...](_screenshots/...)
+- [x] Play Space
+![Play Space](_screenshots/play-space.png)
