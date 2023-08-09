@@ -59,4 +59,13 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4806, 0.6 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="CanFire" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.25
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="CanFire" to="." method="_on_CanFire_timeout"]
+
 
