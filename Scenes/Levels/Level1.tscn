@@ -11,6 +11,10 @@
 
 [node name="Level1" index="0" instance=ExtResource( 1 )]
 
+[node name="Walls" parent="." index="1"]
+
+editor/display_folded = true
+
 [node name="WallWindow" parent="Walls" index="0" instance=ExtResource( 2 )]
 
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.028125, 0.2, 32.0619 )

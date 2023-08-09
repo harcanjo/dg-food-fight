@@ -4,6 +4,9 @@ Project from Discovering Godot
 
 ## Progress
 
+- [x] Fire Food
+![Fire Food](_screenshots/fire-food.gif)
+
 - [x] Fire Projectiles
 ![Fire Projectiles](_screenshots/fire.gif)
 
