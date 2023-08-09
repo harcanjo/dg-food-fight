@@ -4,6 +4,9 @@ Project from Discovering Godot
 
 ## Progress
 
+- [x] Fire Projectiles
+![Fire Projectiles](_screenshots/fire.gif)
+
 - [x] Simple Level
 ![Simple Level](_screenshots/simple-level.png)
 
