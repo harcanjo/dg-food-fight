@@ -4,6 +4,9 @@ Project from Discovering Godot
 
 ## Progress
 
+- [x] Bystanders
+![Bystanders](_screenshots/bystanders.png)
+
 - [x] Fire Food
 ![Fire Food](_screenshots/fire-food.gif)
 
