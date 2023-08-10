@@ -4,8 +4,8 @@ Project from Discovering Godot
 
 ## Progress
 
-- [x] Bystanders
-![Bystanders](_screenshots/robot-npc.gif)
+- [x] Robot NPCs
+![Robot NPCs](_screenshots/robot-npc.gif)
 
 - [x] Bystanders
 ![Bystanders](_screenshots/bystanders.png)
