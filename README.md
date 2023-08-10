@@ -4,6 +4,9 @@ Project from Discovering Godot
 
 ## Progress
 
+- [x] Pause Pop Up
+![Pause Pop Up](_screenshots/pause-popup.png)
+
 - [x] Robot NPCs
 ![Robot NPCs](_screenshots/robot-npc.gif)
 
