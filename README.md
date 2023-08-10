@@ -5,6 +5,9 @@ Project from Discovering Godot
 ## Progress
 
 - [x] Bystanders
+![Bystanders](_screenshots/robot-npc.gif)
+
+- [x] Bystanders
 ![Bystanders](_screenshots/bystanders.png)
 
 - [x] Fire Food
