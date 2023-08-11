@@ -90,5 +90,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 pause_mode = 2
 _sections_unfolded = [ "Pause" ]
 
+[node name="CollisionWalls" type="Node" parent="." index="6"]
+
 
 [editable path="Player"]
