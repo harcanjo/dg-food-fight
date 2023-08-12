@@ -4,6 +4,9 @@ Project from Discovering Godot
 
 ## Progress
 
+- [x] Level Furniture
+![Level Furniture](_screenshots/furniture.png)
+
 - [x] Pause Pop Up
 ![Pause Pop Up](_screenshots/pause-popup.png)
 
