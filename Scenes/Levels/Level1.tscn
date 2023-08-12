@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Architecture/WallWindow.tscn" type="PackedScene" id=2]
@@ -15,10 +15,12 @@
 [ext_resource path="res://Scenes/Furniture/StaticBody/KitchenFridge.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Furniture/StaticBody/KitchenStove.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Furniture/StaticBody/KitchenSink.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Scenes/Furniture/StaticBody/KitchenCoffeeMachine.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Furniture/StaticBody/KitchenMicrowave.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Scenes/Characters/Robot/Robot.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Furniture/RigidBody/CoffeeMachine.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Furniture/RigidBody/SmallTable.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Furniture/RigidBody/Chair.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Furniture/RigidBody/PlantSmall.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Characters/Robot/Robot.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Animation" id=1]
 
@@ -228,10 +230,6 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5, 0.2, 32.5 )
 
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7, 0.2, 32.5 )
 
-[node name="Furniture" parent="." index="2"]
-
-editor/display_folded = true
-
 [node name="KitchenBar" type="Node" parent="Furniture" index="0"]
 
 editor/display_folded = true
@@ -395,26 +393,39 @@ _sections_unfolded = [ "Transform" ]
 transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -11.3557, 0.25, 22.099 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Eletro" type="Node" parent="Furniture" index="5"]
+[node name="RigidBodies" type="Node" parent="Furniture" index="5"]
+
+[node name="CoffeeMachine" parent="Furniture/RigidBodies" index="0" instance=ExtResource( 16 )]
+
+transform = Transform( -0.440385, 0, -0.897809, 0, 1, 0, 0.897809, 0, -0.440385, -6.72505, 1.54892, 21.4977 )
+
+[node name="TablesAndChairs" type="Node" parent="Furniture/RigidBodies" index="1"]
 
 editor/display_folded = true
 
-[node name="KitchenCoffeeMachine" parent="Furniture/Eletro" index="0" instance=ExtResource( 16 )]
+[node name="SmallTable" parent="Furniture/RigidBodies/TablesAndChairs" index="0" instance=ExtResource( 17 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.499208, 1.30143, 21.4339 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.84736, 0.623741, 9.30456 )
 
-[node name="KitchenCoffeeMachine2" parent="Furniture/Eletro" index="1" instance=ExtResource( 16 )]
+[node name="Chair" parent="Furniture/RigidBodies/TablesAndChairs" index="1" instance=ExtResource( 18 )]
 
-transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -7.77414, 1.30143, 21.571 )
-_sections_unfolded = [ "Transform" ]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.73842, 0.630057, 9.32191 )
 
-[node name="KitchenMicrowave" parent="Furniture/Eletro" index="2" instance=ExtResource( 17 )]
+[node name="Chair3" parent="Furniture/RigidBodies/TablesAndChairs" index="2" instance=ExtResource( 18 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.58677, 1.30029, 25.6466 )
+transform = Transform( -0.929272, 0, -0.369395, 0, 1, 0, 0.369395, 0, -0.929272, -5.19196, 0.630057, 9.16955 )
 
-[node name="KitchenMicrowave2" parent="Furniture/Eletro" index="3" instance=ExtResource( 17 )]
+[node name="Chair2" parent="Furniture/RigidBodies/TablesAndChairs" index="3" instance=ExtResource( 18 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25334, 1.30029, 25.6466 )
+transform = Transform( 0.483349, 0, -0.875427, 0, 1, 0, 0.875427, 0, 0.483349, -5.98385, 0.682406, 8.39596 )
+
+[node name="Chair4" parent="Furniture/RigidBodies/TablesAndChairs" index="4" instance=ExtResource( 18 )]
+
+transform = Transform( -0.039587, 0, 0.999216, 0, 1, 0, -0.999216, 0, -0.039587, -5.81357, 0.682406, 10.1256 )
+
+[node name="PlantSmall" parent="Furniture/RigidBodies" index="2" instance=ExtResource( 19 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83027, 1.30202, 9.30372 )
 
 [node name="DirectionalLight" parent="." index="3"]
 
@@ -428,13 +439,13 @@ transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -5.39
 
 editor/display_folded = true
 
-[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 18 )]
+[node name="Spawner" parent="Spawners" index="0" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -14.7657, 0.519775, 10.7498 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 18 )]
+[node name="Spawner2" parent="Spawners" index="1" instance=ExtResource( 20 )]
 
 editor/display_folded = true
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 2.41858, 0.519775, 9.71376 )
@@ -444,7 +455,7 @@ _sections_unfolded = [ "Transform" ]
 
 editor/display_folded = true
 
-[node name="Robot" parent="Robots" index="0" instance=ExtResource( 19 )]
+[node name="Robot" parent="Robots" index="0" instance=ExtResource( 21 )]
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.275857, 0 )
@@ -454,7 +465,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.275857, 0 )
 autoplay = "Movement"
 anims/Movement = SubResource( 1 )
 
-[node name="Robot2" parent="Robots" index="1" instance=ExtResource( 19 )]
+[node name="Robot2" parent="Robots" index="1" instance=ExtResource( 21 )]
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.275857, -3.63725 )
