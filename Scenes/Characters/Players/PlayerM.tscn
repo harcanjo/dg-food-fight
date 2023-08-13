@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=4]
+[ext_resource path="res://SFX/harp-glissando-up.wav" type="AudioStream" id=5]
 
 [node name="Player" index="0" instance=ExtResource( 1 )]
 
@@ -11,6 +12,7 @@ collision_layer = 2
 collision_mask = 13
 script = ExtResource( 2 )
 _sections_unfolded = [ "Collision" ]
+max_ammo = 5
 
 [node name="MeshInstance" parent="." index="0"]
 
@@ -69,6 +71,24 @@ near = 0.05
 far = 100.0
 script = ExtResource( 4 )
 mouse_sensitivity = 1200
+
+[node name="RefilTimer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="Harp" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 5 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="timeout" from="RefilTimer" to="." method="_on_RefilTimer_timeout"]
 
 
 [editable path="Armature"]
