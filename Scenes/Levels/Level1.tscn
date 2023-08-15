@@ -525,27 +525,55 @@ editor/display_folded = true
 
 [node name="SmallTable" parent="Furniture/RigidBodies/TablesAndChairs5" index="0" instance=ExtResource( 17 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18919, 0.623741, 16.8265 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.03544, 0.623741, 17.382 )
 
 [node name="Chair" parent="Furniture/RigidBodies/TablesAndChairs5" index="1" instance=ExtResource( 18 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08025, 0.630057, 16.8438 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9265, 0.630057, 17.3993 )
 
 [node name="Chair3" parent="Furniture/RigidBodies/TablesAndChairs5" index="2" instance=ExtResource( 18 )]
 
-transform = Transform( -0.929272, 0, -0.369395, 0, 1, 0, 0.369395, 0, -0.929272, -1.53379, 0.630057, 16.6915 )
+transform = Transform( -0.929272, 0, -0.369395, 0, 1, 0, 0.369395, 0, -0.929272, -5.38004, 0.630057, 17.247 )
 
 [node name="Chair2" parent="Furniture/RigidBodies/TablesAndChairs5" index="3" instance=ExtResource( 18 )]
 
-transform = Transform( 0.483349, 0, -0.875427, 0, 1, 0, 0.875427, 0, 0.483349, -2.32568, 0.682406, 15.9179 )
+transform = Transform( 0.483349, 0, -0.875427, 0, 1, 0, 0.875427, 0, 0.483349, -6.17193, 0.682406, 16.4734 )
 
 [node name="Chair4" parent="Furniture/RigidBodies/TablesAndChairs5" index="4" instance=ExtResource( 18 )]
 
-transform = Transform( -0.039587, 0, 0.999216, 0, 1, 0, -0.999216, 0, -0.039587, -2.1554, 0.682406, 17.6475 )
+transform = Transform( -0.039587, 0, 0.999216, 0, 1, 0, -0.999216, 0, -0.039587, -6.00165, 0.682406, 18.203 )
 
 [node name="PlantSmall" parent="Furniture/RigidBodies/TablesAndChairs5" index="5" instance=ExtResource( 19 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1721, 1.30202, 16.8257 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.01835, 1.30202, 17.3812 )
+
+[node name="TablesAndChairs6" type="Node" parent="Furniture/RigidBodies" index="6"]
+
+editor/display_folded = true
+
+[node name="SmallTable" parent="Furniture/RigidBodies/TablesAndChairs6" index="0" instance=ExtResource( 17 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.18919, 0.623741, 7.8265 )
+
+[node name="Chair" parent="Furniture/RigidBodies/TablesAndChairs6" index="1" instance=ExtResource( 18 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.08025, 0.630057, 7.8438 )
+
+[node name="Chair3" parent="Furniture/RigidBodies/TablesAndChairs6" index="2" instance=ExtResource( 18 )]
+
+transform = Transform( -0.929272, 0, -0.369395, 0, 1, 0, 0.369395, 0, -0.929272, -5.53379, 0.630057, 7.6915 )
+
+[node name="Chair2" parent="Furniture/RigidBodies/TablesAndChairs6" index="3" instance=ExtResource( 18 )]
+
+transform = Transform( 0.483349, 0, -0.875427, 0, 1, 0, 0.875427, 0, 0.483349, -6.32568, 0.682406, 6.9179 )
+
+[node name="Chair4" parent="Furniture/RigidBodies/TablesAndChairs6" index="4" instance=ExtResource( 18 )]
+
+transform = Transform( -0.039587, 0, 0.999216, 0, 1, 0, -0.999216, 0, -0.039587, -6.1554, 0.682406, 8.6475 )
+
+[node name="PlantSmall" parent="Furniture/RigidBodies/TablesAndChairs6" index="5" instance=ExtResource( 19 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1721, 1.30202, 7.8257 )
 
 [node name="DirectionalLight" parent="." index="3"]
 
