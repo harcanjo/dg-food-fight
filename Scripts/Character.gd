@@ -33,6 +33,7 @@ func hurt(hurt_by):
 		lives -= 1
 		$HurtSFX.play()
 		check_lives()
+	update_lives()
 
 func check_lives():
 	if lives < 1:
