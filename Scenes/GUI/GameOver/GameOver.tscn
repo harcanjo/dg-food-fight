@@ -102,6 +102,7 @@ use_top_left = false
 
 [node name="ViewportContainer" type="ViewportContainer" parent="CenterContainer/VBoxContainer/CenterContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -147,6 +148,7 @@ shadow_atlas_quad_3 = 4
 
 [node name="Robot" parent="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport" index="0" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 script = null
 
 [node name="AnimationPlayer" parent="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="0"]
@@ -222,8 +224,8 @@ _sections_unfolded = [ "Transform" ]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21715, 1.01315, 1.37423 )
 layers = 1
-light_color = Color( 1, 1, 1, 1 )
-light_energy = 1.0
+light_color = Color( 0.910156, 0.816274, 0.309311, 1 )
+light_energy = 3.0
 light_indirect_energy = 1.0
 light_negative = false
 light_specular = 0.5
@@ -239,6 +241,35 @@ omni_range = 5.0
 omni_attenuation = 1.0
 omni_shadow_mode = 1
 omni_shadow_detail = 1
+_sections_unfolded = [ "Light" ]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport" index="3"]
+
+transform = Transform( 0.850984, 0.15748, -0.501024, 0, 0.953986, 0.299853, 0.525191, -0.25517, 0.811827, -3.06106, 3.56223, 4.77184 )
+layers = 1
+light_color = Color( 0.338379, 0.604099, 0.65625, 1 )
+light_energy = 2.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.1
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+directional_shadow_mode = 2
+directional_shadow_split_1 = 0.1
+directional_shadow_split_2 = 0.2
+directional_shadow_split_3 = 0.5
+directional_shadow_blend_splits = false
+directional_shadow_normal_bias = 0.8
+directional_shadow_bias_split_scale = 0.25
+directional_shadow_depth_range = 0
+directional_shadow_max_distance = 200.0
+_sections_unfolded = [ "Light" ]
 
 
 [editable path="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport/Robot"]
