@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Scenes/Characters/Robot/Robot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Characters/Robot/Robot.tscn" type="PackedScene" id=3]
 
 [node name="GameOver" type="Control" index="0"]
 
@@ -16,6 +17,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 1 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Theme" ]
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
@@ -147,7 +149,7 @@ shadow_atlas_quad_1 = 2
 shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 
-[node name="Robot" parent="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport" index="0" instance=ExtResource( 2 )]
+[node name="Robot" parent="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport" index="0" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 script = null
@@ -325,7 +327,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2/GridContainer" index="1"]
+[node name="RestartButton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2/GridContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -370,7 +372,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2/GridContainer" index="3"]
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2/GridContainer" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -395,6 +397,10 @@ group = null
 flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/GridContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/GridContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
 
 
 [editable path="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport/Robot"]
