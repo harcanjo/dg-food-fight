@@ -87,7 +87,6 @@ max_lines_visible = -1
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -105,7 +104,6 @@ use_top_left = false
 
 [node name="ViewportContainer" type="ViewportContainer" parent="CenterContainer/VBoxContainer/CenterContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -225,7 +223,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="OmniLight" type="OmniLight" parent="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport" index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21715, 1.01315, 1.37423 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37286, 1.22872, 3.16981 )
 layers = 1
 light_color = Color( 0.910156, 0.816274, 0.309311, 1 )
 light_energy = 3.0
@@ -276,6 +274,7 @@ _sections_unfolded = [ "Light" ]
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -293,12 +292,13 @@ use_top_left = false
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer/CenterContainer2" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 108.0
-margin_right = 297.0
+margin_left = 28.0
+margin_right = 377.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -314,7 +314,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 155.0
+margin_right = 315.0
 margin_bottom = 30.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -322,7 +322,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Try Again"
+text = "I DEMAND A REMATCH!"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -333,8 +333,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 159.0
-margin_right = 189.0
+margin_left = 319.0
+margin_right = 349.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -359,7 +359,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 34.0
-margin_right = 155.0
+margin_right = 315.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -367,7 +367,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Quit"
+text = "I SURRENDER!"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -378,9 +378,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 159.0
+margin_left = 319.0
 margin_top = 34.0
-margin_right = 189.0
+margin_right = 349.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 30, 30 )
 rect_pivot_offset = Vector2( 0, 0 )
