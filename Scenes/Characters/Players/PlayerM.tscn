@@ -40,15 +40,9 @@ data = {
 "type": "output"
 }, {
 "filter": [  ],
-"from": "Run",
-"id": "RunAnim",
-"position": Vector2( 178, 183 ),
-"type": "animation"
-}, {
-"filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 180, 63 ),
+"from": "Punch",
+"id": "ThrowAnim",
+"position": Vector2( 504, 33 ),
 "type": "animation"
 }, {
 "blend": 0.0,
@@ -57,9 +51,9 @@ data = {
 "type": "blend3"
 }, {
 "filter": [  ],
-"from": "Punch",
-"id": "ThrowAnim",
-"position": Vector2( 504, 33 ),
+"from": "Run",
+"id": "RunAnim",
+"position": Vector2( 178, 183 ),
 "type": "animation"
 }, {
 "filter": [  ],
@@ -67,12 +61,18 @@ data = {
 "id": "ReloadAnim",
 "position": Vector2( 500, 182 ),
 "type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 180, 63 ),
+"type": "animation"
 } ]
 }
 
 [node name="Camera" type="Camera" parent="." index="3"]
 
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 2, -4 )
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0, 3.41537, -5.62804 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null

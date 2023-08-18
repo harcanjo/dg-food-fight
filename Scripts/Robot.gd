@@ -5,7 +5,7 @@ signal remove_enemy
 func _ready():
 	$RobotArmature/AnimationPlayer.get_animation("Robot_Running").set_loop(true)
 	character_type = CHARACTER_TYPES.npc
-	var gamestate = get_parente().get_parent()
+	var gamestate = get_parent().get_parent()
 	connect("remove_enemy", gamestate, "remove_enemy")
 
 func _physics_process(delta):
