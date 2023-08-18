@@ -11,4 +11,6 @@ func _physics_process(delta):
 		$CanFire.start()
 		
 func update_lives():
-	pass
+	if lives > 0:
+		var life = $Lives.get_child(0).get_child(0)
+		life.play("lose_life")

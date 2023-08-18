@@ -242,9 +242,12 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Lives" type="Spatial" parent="." index="8"]
 
+editor/display_folded = true
+
 [node name="Life" type="Sprite3D" parent="Lives" index="0"]
 
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3, 0 )
+editor/display_folded = true
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 2.47758, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -286,6 +289,7 @@ blend_times = [  ]
 
 [node name="Life2" type="Sprite3D" parent="Lives" index="1"]
 
+editor/display_folded = true
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3, 0 )
 layers = 1
 material_override = null
@@ -328,7 +332,8 @@ blend_times = [  ]
 
 [node name="Life3" type="Sprite3D" parent="Lives" index="2"]
 
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3, 0 )
+editor/display_folded = true
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 2.47758, 0 )
 layers = 1
 material_override = null
 cast_shadow = 1

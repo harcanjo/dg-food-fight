@@ -38,7 +38,5 @@ func hurt(hurt_by):
 func check_lives():
 	if lives < 1:
 		die()
-	
-func die():
-	queue_free()
+
 	
