@@ -40,9 +40,9 @@ data = {
 "type": "output"
 }, {
 "filter": [  ],
-"from": "Punch",
-"id": "ThrowAnim",
-"position": Vector2( 504, 33 ),
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 180, 63 ),
 "type": "animation"
 }, {
 "blend": 0.0,
@@ -51,21 +51,21 @@ data = {
 "type": "blend3"
 }, {
 "filter": [  ],
-"from": "Run",
-"id": "RunAnim",
-"position": Vector2( 178, 183 ),
-"type": "animation"
-}, {
-"filter": [  ],
 "from": "Working",
 "id": "ReloadAnim",
 "position": Vector2( 500, 182 ),
 "type": "animation"
 }, {
 "filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 180, 63 ),
+"from": "Run",
+"id": "RunAnim",
+"position": Vector2( 178, 183 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Punch",
+"id": "ThrowAnim",
+"position": Vector2( 504, 33 ),
 "type": "animation"
 } ]
 }
