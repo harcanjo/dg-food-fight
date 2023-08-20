@@ -4,6 +4,9 @@ Project from Discovering Godot
 
 ## Progress
 
+- [x] Character Customisation
+![Character Customisation](_screenshots/character-customisation.png)
+
 - [x] Level Furniture
 ![Level Furniture](_screenshots/furniture.png)
 
