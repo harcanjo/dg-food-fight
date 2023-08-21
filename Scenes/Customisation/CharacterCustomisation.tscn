@@ -364,7 +364,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Camera" type="Camera" parent="." index="4"]
 
-transform = Transform( 1, 0, 0, 0, 0.95667, 0.291175, 0, -0.291175, 0.95667, 0, 1.59917, 2.38818 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 2.7 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -377,5 +377,6 @@ fov = 70.0
 size = 1.0
 near = 0.05
 far = 100.0
+_sections_unfolded = [ "Transform" ]
 
 
