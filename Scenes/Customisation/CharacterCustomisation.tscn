@@ -1,9 +1,17 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Characters/Players/PlayerF.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Materials/DarkWood.material" type="Material" id=3]
-[ext_resource path="res://Materials/MetalDark.material" type="Material" id=4]
+[ext_resource path="res://Scripts/CharacterCustomisation.gd" type="Script" id=1]
+[ext_resource path="res://Materials/DarkWood.material" type="Material" id=2]
+[ext_resource path="res://Materials/MetalDark.material" type="Material" id=3]
+[ext_resource path="res://Scenes/Customisation/CustomisationUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GUI/GFX/blue_button09.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/GUI/GFX/blue_button07.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/GUI/GFX/blue_button08.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/GUI/GFX/blue_boxCross.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/GUI/GFX/blue_button06.png" type="Texture" id=9]
+[ext_resource path="res://Fonts/Kenney Bold.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-F.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=12]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -83,15 +91,152 @@ radial_segments = 64
 rings = 32
 is_hemisphere = false
 
+[sub_resource type="StyleBoxTexture" id=6]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 49, 49 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=7]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 49, 49 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=8]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 49, 45 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.179688, 0.179688, 0.179688, 0.572549 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=9]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 10 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
+
+[sub_resource type="Theme" id=10]
+
+resource_local_to_scene = true
+default_font = SubResource( 9 )
+Button/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = SubResource( 6 )
+Button/styles/normal = SubResource( 7 )
+Button/styles/pressed = SubResource( 8 )
+CheckBox/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckBox/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+CheckBox/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = ExtResource( 8 )
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/unchecked = ExtResource( 9 )
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = null
+CheckBox/styles/normal = null
+CheckBox/styles/pressed = null
+OptionButton/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+OptionButton/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+OptionButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+OptionButton/constants/arrow_margin = 2
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = null
+OptionButton/styles/hover = SubResource( 5 )
+OptionButton/styles/normal = SubResource( 5 )
+OptionButton/styles/pressed = SubResource( 5 )
+_sections_unfolded = [ "CheckBox/icons", "OptionButton", "OptionButton/styles", "Resource" ]
+
 [node name="CharacterCustomisation" type="Spatial" index="0"]
 
-[node name="ArmatureM" parent="." index="0" instance=ExtResource( 1 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.1, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="ArmatureF" parent="." index="1" instance=ExtResource( 2 )]
-
-visible = false
-
-[node name="Scenary" type="Node" parent="." index="2"]
+[node name="Scenary" type="Node" parent="." index="0"]
 
 editor/display_folded = true
 
@@ -109,7 +254,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 1 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 3 )
+material/0 = ExtResource( 2 )
 _sections_unfolded = [ "material" ]
 
 [node name="Floor" type="MeshInstance" parent="Scenary" index="1"]
@@ -126,7 +271,7 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = SubResource( 2 )
 skeleton = NodePath("..")
-material/0 = ExtResource( 4 )
+material/0 = ExtResource( 3 )
 _sections_unfolded = [ "Transform", "material" ]
 
 [node name="Wall" type="MeshInstance" parent="Scenary" index="2"]
@@ -146,7 +291,7 @@ skeleton = NodePath("..")
 material/0 = null
 _sections_unfolded = [ "Transform", "material" ]
 
-[node name="Lights" type="Node" parent="." index="3"]
+[node name="Lights" type="Node" parent="." index="1"]
 
 editor/display_folded = true
 
@@ -362,9 +507,9 @@ directional_shadow_depth_range = 0
 directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="Camera" type="Camera" parent="." index="4"]
+[node name="Camera" type="Camera" parent="." index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 2.7 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7, 6 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -379,4 +524,34 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
+[node name="CustomisationUI" parent="." index="3" instance=ExtResource( 4 )]
 
+editor/display_folded = true
+
+[node name="Controls" parent="CustomisationUI" index="0"]
+
+theme = SubResource( 10 )
+
+[node name="CharacterSelect" parent="CustomisationUI/Controls" index="1"]
+
+text = "Freya"
+
+[node name="ArmatureF" parent="." index="4" instance=ExtResource( 11 )]
+
+editor/display_folded = true
+
+[node name="ArmatureM" parent="." index="5" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+transform = Transform( 0.7, 0, 0, 0, -3.0598e-008, -0.7, 0, 0.7, -3.0598e-008, 0, 0, 0 )
+
+[connection signal="item_selected" from="CustomisationUI/Controls/CharacterSelect" to="." method="_on_CharacterSelect_item_selected"]
+
+[connection signal="pressed" from="CustomisationUI/Controls/HBoxContainer/LeftButton" to="." method="change_material" binds= [ "Left" ]]
+
+[connection signal="pressed" from="CustomisationUI/Controls/HBoxContainer/RightButton" to="." method="change_material" binds= [ "Right" ]]
+
+[connection signal="pressed" from="CustomisationUI/Controls/HBoxContainer2/StartButton" to="." method="_on_StartButton_pressed"]
+
+
+[editable path="CustomisationUI"]

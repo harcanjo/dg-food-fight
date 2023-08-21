@@ -137,7 +137,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="TextureButton" type="TextureButton" parent="Controls/HBoxContainer" index="2"]
+[node name="RightButton" type="TextureButton" parent="Controls/HBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -199,7 +199,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Button" type="Button" parent="Controls/HBoxContainer2" index="1"]
+[node name="StartButton" type="Button" parent="Controls/HBoxContainer2" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0

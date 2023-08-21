@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Characters/Players/PlayerTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-F.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Characters/Players/AnimationTreePlayer.tscn" type="PackedScene" id=3]
 
 [node name="Player" index="0" instance=ExtResource( 1 )]
 
@@ -10,7 +9,7 @@
 
 transform = Transform( 0.0038, 0, 0, 0, 0.0038, 0, 0, 0, 0.0038, 0, 0.00412649, 0 )
 
-[node name="AnimationTreePlayer" parent="Armature" index="2" instance=ExtResource( 3 )]
+[node name="AnimationTreePlayer" parent="Armature" index="2"]
 
 data = {
 "active": true,
@@ -28,17 +27,6 @@ data = {
 "type": "output"
 }, {
 "filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 180, 63 ),
-"type": "animation"
-}, {
-"blend": 0.01,
-"id": "Action",
-"position": Vector2( 732, 76 ),
-"type": "blend3"
-}, {
-"filter": [  ],
 "from": "PickUp",
 "id": "ReloadAnim",
 "position": Vector2( 500, 182 ),
@@ -54,6 +42,17 @@ data = {
 "from": "Punch",
 "id": "ThrowAnim",
 "position": Vector2( 504, 33 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"id": "Action",
+"position": Vector2( 732, 76 ),
+"type": "blend3"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 180, 63 ),
 "type": "animation"
 } ]
 }
