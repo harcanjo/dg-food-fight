@@ -3,8 +3,10 @@ extends Spatial
 var materials_list = {}
 var current_material = 0
 var current_player
+var selected_material # The material we're passing through to customisation.gd
 
 func _ready():
+	get_tree().paused = false
 	materials_list = file_grabber.get_files("res://Scenes/Customisation/PlayerMaterials/")
 	current_player = "Female"
 	$ArmatureM.hide()
@@ -51,6 +53,8 @@ func select_material(direction, materials_count):
 			current_material -= 1
 
 func _on_StartButton_pressed():
+	customisation.Player_materials = selected_material
+	customisation.Player_character = current_player
 	get_tree().change_scene("res://Scenes/Levels/Level1.tscn")
 
 

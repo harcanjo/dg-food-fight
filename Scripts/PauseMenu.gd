@@ -12,10 +12,20 @@ func toggle_pause_menu():
 	else:
 		$Popup.hide()
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		
-func _on_CheckBox_pressed():
+
+func _on_QuitGame_pressed():
+	get_tree().quit()
+
+func _on_Customise_pressed():
+	get_tree().change_scene("res://Scenes/Customisation/CharacterCustomisation.tscn")
+
+func _on_Fullscreen_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
 
 
-func _on_CheckBox3_pressed():
-	get_tree().quit()
+
+
+
+
+
+

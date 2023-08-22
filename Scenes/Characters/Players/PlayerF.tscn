@@ -27,6 +27,17 @@ data = {
 "type": "output"
 }, {
 "filter": [  ],
+"from": "Idle",
+"id": "IdleAnim",
+"position": Vector2( 180, 63 ),
+"type": "animation"
+}, {
+"blend": 0.0,
+"id": "Action",
+"position": Vector2( 732, 76 ),
+"type": "blend3"
+}, {
+"filter": [  ],
 "from": "PickUp",
 "id": "ReloadAnim",
 "position": Vector2( 500, 182 ),
@@ -42,17 +53,6 @@ data = {
 "from": "Punch",
 "id": "ThrowAnim",
 "position": Vector2( 504, 33 ),
-"type": "animation"
-}, {
-"blend": 0.0,
-"id": "Action",
-"position": Vector2( 732, 76 ),
-"type": "blend3"
-}, {
-"filter": [  ],
-"from": "Idle",
-"id": "IdleAnim",
-"position": Vector2( 180, 63 ),
 "type": "animation"
 } ]
 }

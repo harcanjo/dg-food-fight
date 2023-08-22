@@ -24,9 +24,12 @@
 [ext_resource path="res://Scenes/RefilArea.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/GUI/GUI.tscn" type="PackedScene" id=23]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="BoxShape" id=1]
 
-resource_name = "Movement"
+extents = Vector3( 6.69372, 4.91025, 0.307324 )
+
+[sub_resource type="Animation" id=2]
+
 length = 4.0
 loop = true
 step = 1.0
@@ -43,9 +46,8 @@ tracks/0/keys = {
 "values": [ Vector3( -11, 0.275857, 0 ), Vector3( -1.8, 0.275857, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "Movement"
 length = 4.0
 loop = true
 step = 1.0
@@ -61,10 +63,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector3( -1.8, 0, -3.63725 ), Vector3( -11, 0, -3.63725 ) ]
 }
-
-[sub_resource type="BoxShape" id=3]
-
-extents = Vector3( 6.69372, 4.91025, 0.307324 )
 
 [node name="Level1" index="0" instance=ExtResource( 1 )]
 
@@ -575,9 +573,9 @@ transform = Transform( -0.039587, 0, 0.999216, 0, 1, 0, -0.999216, 0, -0.039587,
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1721, 1.30202, 7.8257 )
 
-[node name="Player" parent="." index="4"]
+[node name="DirectionalLight" parent="." index="3"]
 
-transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -5.39014, 0.2, 19.7249 )
+light_cull_mask = -1
 
 [node name="Spawners" type="Node" parent="." index="5"]
 
@@ -595,29 +593,7 @@ editor/display_folded = true
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 2.41858, 0.519775, 9.71376 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Robots" parent="." index="6"]
-
-editor/display_folded = true
-
-[node name="Robot" parent="Robots" index="0" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.275857, 0 )
-
-[node name="PositionAnimation" parent="Robots/Robot" index="6"]
-
-autoplay = "Movement"
-anims/Movement = SubResource( 1 )
-
-[node name="Robot2" parent="Robots" index="1" instance=ExtResource( 21 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.275857, -3.63725 )
-
-[node name="PositionAnimation" parent="Robots/Robot2" index="6"]
-
-autoplay = "Movement"
-anims/Movement = SubResource( 2 )
-
-[node name="CollisionWalls" parent="." index="8"]
+[node name="CollisionWalls" parent="." index="6"]
 
 editor/display_folded = true
 
@@ -636,7 +612,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="CollisionWalls/FrontWall" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 disabled = false
 
 [node name="BackWall" type="StaticBody" parent="CollisionWalls" index="1"]
@@ -654,8 +630,35 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="CollisionWalls/BackWall" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 disabled = false
+
+[node name="Robots" parent="." index="7"]
+
+editor/display_folded = true
+
+[node name="Robot" parent="Robots" index="0" instance=ExtResource( 21 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.275857, 0 )
+
+[node name="PositionAnimation" parent="Robots/Robot" index="6"]
+
+autoplay = "Movement"
+anims/Movement = SubResource( 2 )
+
+[node name="Robot2" parent="Robots" index="1" instance=ExtResource( 21 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.275857, -3.63725 )
+
+[node name="PositionAnimation" parent="Robots/Robot2" index="6"]
+
+autoplay = "Movement"
+anims/Movement = SubResource( 3 )
+
+[node name="PlayerStartPosition" parent="." index="8"]
+
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -6.53044, 0.527004, 19.8719 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="RefilArea" parent="." index="9" instance=ExtResource( 22 )]
 
@@ -672,6 +675,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.754577, 19 )
 [node name="GUI" parent="." index="12" instance=ExtResource( 23 )]
 
 
-[editable path="Player"]
 [editable path="Robots/Robot"]
 [editable path="Robots/Robot2"]
