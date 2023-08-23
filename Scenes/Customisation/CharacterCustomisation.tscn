@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/CharacterCustomisation.gd" type="Script" id=1]
 [ext_resource path="res://Materials/DarkWood.material" type="Material" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Fonts/Kenney Bold.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-F.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=12]
+[ext_resource path="res://SFX/intro.ogg" type="AudioStream" id=13]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -91,7 +92,7 @@ radial_segments = 64
 rings = 32
 is_hemisphere = false
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxTexture" id=5]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -110,7 +111,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=6]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -129,7 +130,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=7]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -148,7 +149,7 @@ expand_margin_bottom = 0.0
 modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=8]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -196,9 +197,9 @@ Button/constants/hseparation = 2
 Button/fonts/font = null
 Button/styles/disabled = null
 Button/styles/focus = null
-Button/styles/hover = SubResource( 6 )
-Button/styles/normal = SubResource( 7 )
-Button/styles/pressed = SubResource( 8 )
+Button/styles/hover = SubResource( 5 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 7 )
 CheckBox/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 CheckBox/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
@@ -225,9 +226,9 @@ OptionButton/fonts/font = null
 OptionButton/icons/arrow = null
 OptionButton/styles/disabled = null
 OptionButton/styles/focus = null
-OptionButton/styles/hover = SubResource( 5 )
-OptionButton/styles/normal = SubResource( 5 )
-OptionButton/styles/pressed = SubResource( 5 )
+OptionButton/styles/hover = SubResource( 8 )
+OptionButton/styles/normal = SubResource( 8 )
+OptionButton/styles/pressed = SubResource( 8 )
 _sections_unfolded = [ "CheckBox/icons", "OptionButton", "OptionButton/styles", "Resource" ]
 
 [node name="CharacterCustomisation" type="Spatial" index="0"]
@@ -535,6 +536,7 @@ theme = SubResource( 10 )
 [node name="CharacterSelect" parent="CustomisationUI/Controls" index="1"]
 
 text = "Freya"
+items = [ "Freya", null, false, 0, null, "Frey", null, false, 1, null ]
 
 [node name="ArmatureF" parent="." index="4" instance=ExtResource( 11 )]
 
@@ -544,6 +546,15 @@ editor/display_folded = true
 
 editor/display_folded = true
 transform = Transform( 0.7, 0, 0, 0, -3.0598e-008, -0.7, 0, 0.7, -3.0598e-008, 0, 0, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 13 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="item_selected" from="CustomisationUI/Controls/CharacterSelect" to="." method="_on_CharacterSelect_item_selected"]
 

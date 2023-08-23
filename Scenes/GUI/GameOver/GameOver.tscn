@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/GameOver.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Characters/Robot/Robot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SFX/GameOver.ogg" type="AudioStream" id=4]
 
-[node name="GameOver" type="Control" index="0"]
+[node name="GameOver" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -151,6 +152,21 @@ shadow_atlas_quad_3 = 4
 
 editor/display_folded = true
 script = null
+
+[node name="RobotArmature" parent="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport/Robot" index="4"]
+
+bones/1/bound_children = [  ]
+bones/2/bound_children = [  ]
+bones/7/bound_children = [  ]
+bones/8/bound_children = [  ]
+bones/9/bound_children = [  ]
+bones/22/bound_children = [  ]
+bones/23/bound_children = [  ]
+bones/37/bound_children = [  ]
+bones/38/bound_children = [  ]
+bones/39/bound_children = [  ]
+bones/41/bound_children = [  ]
+bones/42/bound_children = [  ]
 
 [node name="AnimationPlayer" parent="CenterContainer/VBoxContainer/CenterContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="0"]
 
@@ -397,6 +413,15 @@ group = null
 flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/GridContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
 

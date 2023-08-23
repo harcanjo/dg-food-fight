@@ -10,7 +10,7 @@ func _ready():
 	materials_list = file_grabber.get_files("res://Scenes/Customisation/PlayerMaterials/")
 	current_player = "Female"
 	$ArmatureM.hide()
-	print(materials_list)
+	# print(materials_list)
 
 
 func _on_CharacterSelect_item_selected(ID):
